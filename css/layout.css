@@ -1,0 +1,37 @@
+
+.layout__item--full-width { width: 100%; }
+
+.layout__item--70-percent { width: 70%; }
+
+.layout__item--66-percent-w-gutter { width: calc(66% - 1.5rem); }
+
+.layout__item--50-percent-w-gutter { width: calc(50% - 1.5rem ); }
+
+.layout__item--33-percent-w-gutter { width: calc(33% - 1.5rem); }
+
+
+.layout__item--w-sticky-footer { min-height: calc(100vh - 8rem); }
+
+
+
+.layout__item--centered-horizontally {
+    margin-right:  auto;
+    margin-left:   auto;
+}
+
+.gutter--horizontal-small { margin-bottom: 3rem; }
+
+.gutter--horizontal-big { margin-bottom: 4rem; }
+
+.layout__item--float-left { float: left; }
+
+.layout__item--float-right { float: right; }
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+

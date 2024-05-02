@@ -1,0 +1,256 @@
+/*-------------------------------*\
+            BUTTONS
+\*-------------------------------*/
+
+.btn {
+    display: inline-block;
+    width: 16rem;
+    padding: 1.2rem 0;
+    border: 0.2rem solid;
+    border-color: transparent;
+    text-align: center;
+    border-radius: 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn--secondary-solid {
+    background-color: #fff;
+    color: #6200EA;
+    border-color: #fff;
+}
+
+.btn--secondary-hollow {
+    border-color: #fff;
+    color: #fff;
+}
+
+
+/*-------------------------------*\
+            HEADER
+\*-------------------------------*/
+
+.header {
+    height: 8rem;
+    background-color: #6200EA;
+    position: relative;
+}
+
+.header__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo img {
+    width: 18rem;
+}
+
+
+#menu-btn {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-5%, -50%);
+    font-size: 5rem;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-btn.active { color: #fff; }
+
+#menu-btn:hover { color: #fff; }
+
+/*-------------------------------*\
+            NAVIGATION
+\*-------------------------------*/
+
+.navigation {
+    background-color: #fff;
+    height: 8rem;
+}
+
+.navigation__wrapper {
+    height: 100%;
+}
+
+.list__items {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.list__item {
+    padding: 2.8rem 0;
+    border-bottom: .4rem solid;
+    border-bottom-color: transparent;
+}
+
+.list__item:hover { border-bottom-color: #6200EA; }
+
+/*-------------------------------*\
+            POST
+\*-------------------------------*/
+
+
+.post {
+    height: 35rem;
+    border-radius: 15px;
+    padding: 6rem 6rem 5rem 6rem; 
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured__post {
+    background-image: url('../assets/blog_posts/roberto-nickson-5ui0tfMC5ts-unsplash.jpg');
+    background-size:  cover;
+}
+
+
+.featured__lead { color: #fff; }
+
+.featured__title,
+.featured__text  {
+    color: #fff;
+    margin: 1.5rem 0;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(12rem, 1fr) );
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.cover {
+    border-radius: 10px;
+}
+
+
+
+.card__title {
+    color: #6200EA;
+    margin-bottom: 1.5rem;
+}
+
+.card__text { font-size: 1.4rem; }
+
+
+
+
+/*-------------------------------*\
+            SIDEBAR
+\*-------------------------------*/
+
+.sidebar {
+    height: 50rem;
+    background-color: blue;
+}
+
+/*-------------------------------*\
+            MOBILE
+\*-------------------------------*/
+
+@media (max-width: 991px) {
+    
+    html { font-size: 55%; }
+
+    .post {
+        height: 30rem;
+        padding: 3rem;
+    }
+
+
+}
+
+@media (max-width: 876px) {
+    
+    .btn {
+        width: 12rem;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    #menu-btn { display: inline-block; }
+
+    .btn--secondary-solid { display: none; }
+
+    .header { margin-bottom: 4rem; }
+
+    .navigation {
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 8rem);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 350ms;
+        margin-bottom: 0rem !important;
+    }
+
+    .navigation.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .list__items {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .post__container,
+    .sidebar {
+        float: none;
+        width: 100%;
+    }
+
+    .post {
+        height: 25rem;
+        padding: 3rem;
+    }
+
+    .post_lead { font-size: 1rem; }
+
+    .post__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .post__text {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        float: none;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+
+
+
+}
+
+@media (max-width: 450px) {
+    html { font-size: 50%; }
+}
