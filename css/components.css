@@ -10,12 +10,17 @@
     border-color: transparent;
     text-align: center;
     border-radius: 24px;
-    font-size: 1.2rem;
+    font-size:  1.2rem;
     font-weight: bold;
     letter-spacing: 2.4px;
     text-transform: uppercase;
     cursor: pointer;
     background-color: transparent;
+}
+
+.btn--primary-hollow {
+    border-color: #6200EA;
+    color: #6200EA;
 }
 
 .btn--secondary-solid {
@@ -105,16 +110,28 @@
 
 
 .post {
-    height: 35rem;
     border-radius: 15px;
     padding: 6rem 6rem 5rem 6rem; 
     overflow: hidden;
+    background-color: #fff;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+
+.lead { 
+    font-size: 1.2rem;
+    color: #B2ACBA;
+ }
+
+.post__text { 
+     font-size: 2rem;
+     margin: 1.5rem 0;
+     line-height: 3rem;
+     }
+
+.post__title {
+    font-size: 4rem; 
+    margin: 1.5rem 0;
 }
 
 .featured__post {
@@ -122,13 +139,34 @@ img {
     background-size:  cover;
 }
 
-
 .featured__lead { color: #fff; }
 
 .featured__title,
 .featured__text  {
     color: #fff;
-    margin: 1.5rem 0;
+}
+
+.post__cover {
+    height: 32rem;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+.post--w-cover { border-radius: 0 0 15px 15px; }
+
+/*-------------------------------*\
+           CARDS
+\*-------------------------------*/
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.cover {
+    border-radius: 10px;
 }
 
 .card {
@@ -141,10 +179,27 @@ img {
     border-radius: 15px;
 }
 
-.cover {
-    border-radius: 10px;
+.image__wrapper {
+    height: 12rem;
+
 }
 
+
+
+
+.sidebar__card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.sidebar__card img {
+    height: 12rem;
+    width: 12rem;
+    object-fit: cover;
+    float: left;
+    margin-right: 2rem;
+}
 
 
 .card__title {
@@ -161,23 +216,83 @@ img {
             SIDEBAR
 \*-------------------------------*/
 
-.sidebar {
-    height: 50rem;
-    background-color: blue;
+.sidebar__element {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.sidebar__element ul li {
+    padding: 1.7rem 3rem 1.7rem 3rem;
+}
+
+.sidebar__header,
+.sidebar__footer {
+    padding: 2.3rem 0;
+    text-align: center;
+}
+
+.sidebar__header {
+    background-color: #6200EA;
+    color: #fff;
+}
+
+.sidebar__footer {
+    border-top: 1px solid #F4F3F5;
+    color: #B2ACBA;
+}
+
+/*-------------------------------*\
+            FOOTER
+\*-------------------------------*/
+
+.footer {
+    height: 10rem;
+    background-color: #211138;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B2ACBA;
+    text-align: center;
+    padding: 0 6rem;
+}
+
+.brand__name,
+.student__name {
+    color: #6200EA;
 }
 
 /*-------------------------------*\
             MOBILE
 \*-------------------------------*/
 
+@media (max-width: 1152px) {
+    .lead { font-size: 1rem; }
+
+    .post__text { 
+        font-size: 1.5rem;
+        line-height: 2rem;
+        }
+
+    .post__title { font-size: 2.5rem; }
+}
+
 @media (max-width: 991px) {
     
     html { font-size: 55%; }
 
     .post {
-        height: 30rem;
         padding: 3rem;
     }
+    
+
 
 
 }
@@ -223,22 +338,7 @@ img {
         width: 100%;
     }
 
-    .post {
-        height: 25rem;
-        padding: 3rem;
-    }
 
-    .post_lead { font-size: 1rem; }
-
-    .post__title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .post__text {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
 
     .card {
         float: none;
@@ -246,7 +346,7 @@ img {
         margin-bottom: 2rem;
     }
 
-
+    .post__cover { height: 20rem; }
 
 
 }

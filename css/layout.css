@@ -10,7 +10,7 @@
 .layout__item--33-percent-w-gutter { width: calc(33% - 1.5rem); }
 
 
-.layout__item--w-sticky-footer { min-height: calc(100vh - 8rem); }
+.layout__item--w-sticky-footer { min-height: calc(100vh - 10rem); }
 
 
 
